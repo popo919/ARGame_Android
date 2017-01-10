@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HealthPowerBar">
+        <attr name="progress_start_color" format="color"/>
+        <attr name="progress_finish_color" format="color"/>
+        <attr name="progress_bar_height" format="dimension"/>
+        <attr name="inner_border_interval" format="dimension"/>
+        <attr name="border_color" format="color"/>
+    </declare-styleable>
+</resources>

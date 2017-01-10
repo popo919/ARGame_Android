@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/camera_overlay_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar"
+            android:id="@+id/loading_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:lineSpacingExtra="10dp"
+            android:textSize="20sp"
+            android:id="@+id/HP"
+            android:textColor="@color/white"
+            android:text="my life\nboss life" />
+
+        <LinearLayout
+            android:id="@+id/power_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/HP"
+            android:orientation="vertical">
+
+            <com.vuforia.samples.VuforiaSamples.ui.my.HealthPowerBar
+                android:id="@+id/my_power_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="15dp"
+                android:progress="100"
+                app:progress_bar_height="20dp"
+                app:inner_border_interval="2dp"
+                app:progress_start_color="@color/health_power_green"
+                app:progress_finish_color="@color/heavy_green"
+                app:border_color="@color/white"/>
+
+            <com.vuforia.samples.VuforiaSamples.ui.my.HealthPowerBar
+                android:id="@+id/enemy_power_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="15dp"
+                android:progress="100"
+                app:progress_bar_height="20dp"
+                app:inner_border_interval="2dp"
+                app:progress_start_color="@color/health_power_red"
+                app:progress_finish_color="@color/heavy_red"
+                app:border_color="@color/white"/>
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/alignment_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="4"
+        >
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:layout_gravity="center"
+            android:src="@drawable/reticle"
+            android:adjustViewBounds="true"
+            android:clickable="false"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
